@@ -1,11 +1,9 @@
 module ScheduleEntity where
 
---import Data.Time
-
-data UserEntity = UserEntity
+data ScheduleEntity = ScheduleEntity
   { uid :: Integer,
     class_id :: Integer,
---    start_datetime :: UTCTime,
---    end_datetime :: UTCTime,
+    start_datetime :: String,
+    end_datetime :: String,
     trainer_id :: Integer
   }

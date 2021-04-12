@@ -23,3 +23,5 @@ cabal.project.local~
 .ghc.environment.*
 
 Lab1/.idea/libraries/
+
+Lab1/out/production/

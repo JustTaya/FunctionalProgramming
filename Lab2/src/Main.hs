@@ -1,12 +1,15 @@
 module Main where
 
 import IntegralCalculator
+import UnitTest
 
 functionToCalculate :: Double -> Double
-functionToCalculate x = 2*x + 2
+functionToCalculate x = 3*x + 2
 
 main :: IO()
 main = do
+    launchAllTests
+  
     let leftBound = -1.0
     let rightBound = 10.0
   

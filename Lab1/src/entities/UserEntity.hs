@@ -40,3 +40,4 @@ printUser class_entity = do
   putStr (" Email: " ++ email class_entity)
   putStr (" Password: " ++ password class_entity)
   putStr (" Is_trainer: " ++ show (is_trainer class_entity))
+  putStrLn ""

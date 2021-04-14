@@ -36,3 +36,4 @@ printSchedule class_entity = do
   putStr ("Start_datetime" ++ start_datetime class_entity)
   putStr (" End_datetime" ++ end_datetime class_entity)
   putStr ("Trainer_id" ++ show (trainer_id class_entity))
+  putStrLn ""

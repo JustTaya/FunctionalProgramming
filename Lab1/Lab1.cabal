@@ -1,0 +1,80 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: db34b7e9d0a864e95d962843ec28c412131c69cb24ec4a5f597d0430b63c1e68
+
+name:           Lab1
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/Lab1#readme>
+homepage:       https://github.com/githubuser/Lab1#readme
+bug-reports:    https://github.com/githubuser/Lab1/issues
+author:         Taisiia Velychko
+maintainer:     Taisiia Velychko
+copyright:      2021 Taisiia Velychko
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Lab1
+
+library
+  exposed-modules:
+    Utils,
+    ClassEntity,
+    ScheduleEntity,
+    UserEntity,
+    WorkplaceEntity,
+    DefaultRepository,
+    ClassesRepository,
+    UsersRepository,
+    ScheduleRepository,
+    WorkplaceRepository
+  other-modules:
+    Paths_Lab1
+  hs-source-dirs:
+    src, src\entities, src\repositories, src\utils
+  build-depends:
+      HDBC
+    , HDBC-postgresql
+    , base >=4.7 && <5
+    , bytestring
+  default-language: Haskell2010
+
+executable Lab1-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Lab1
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HDBC
+    , HDBC-postgresql
+    , Lab1
+    , base >=4.7 && <5
+    , bytestring
+  default-language: Haskell2010
+
+test-suite Lab1-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_Lab1
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HDBC
+    , HDBC-postgresql
+    , Lab1
+    , base >=4.7 && <5
+    , bytestring
+  default-language: Haskell2010

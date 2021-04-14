@@ -21,3 +21,9 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+Lab1/.idea/libraries/
+
+Lab1/out/production/
+
+Lab1/.idea/

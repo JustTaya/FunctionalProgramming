@@ -28,3 +28,4 @@ printWorkplace class_entity = do
   putStrLn "Schedule:"
   putStr ("Id" ++ show (uid class_entity))
   putStr (" Role" ++ role class_entity)
+  putStrLn ""

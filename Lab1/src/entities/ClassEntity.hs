@@ -26,3 +26,4 @@ printClass class_entity = do
   putStrLn ("Id" ++ show (uid class_entity))
   putStr (" Name" ++ name class_entity)
   putStr (" Annotation" ++ description class_entity)
+  putStrLn ""

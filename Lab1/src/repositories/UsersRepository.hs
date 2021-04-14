@@ -8,7 +8,7 @@ import Database.HDBC
 unpack :: [SqlValue] -> UserEntity
 unpack [SqlInteger _uid, SqlByteString _name, SqlByteString _surname, SqlByteString _email, SqlByteString _password, SqlBool _is_trainer] =
   UserEntity
-    { uid = _uid,
+    { uid = Just _uid,
       name = BS.unpack _name,
       surname = BS.unpack _surname,
       email = BS.unpack _email,

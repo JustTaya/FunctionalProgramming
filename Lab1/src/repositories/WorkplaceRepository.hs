@@ -8,7 +8,7 @@ import WorkplaceEntity
 unpack :: [SqlValue] -> WorkplaceEntity
 unpack [SqlInteger _uid, SqlInteger _class_id, SqlInteger _trainer_id, SqlByteString _role] =
   WorkplaceEntity
-    { uid = _uid,
+    { uid = Just _uid,
       class_id = _class_id,
       trainer_id = _trainer_id,
       role = BS.unpack _role

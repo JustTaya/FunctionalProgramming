@@ -8,7 +8,7 @@ import Database.HDBC
 unpack :: [SqlValue] -> ClassEntity
 unpack [SqlInteger _uid, SqlByteString _name, SqlByteString _description] =
   ClassEntity
-    { uid = _uid,
+    { uid = Just _uid,
       name = BS.unpack _name,
       description = BS.unpack _description
     }

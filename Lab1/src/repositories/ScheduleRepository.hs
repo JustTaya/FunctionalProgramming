@@ -8,7 +8,7 @@ import DefaultRepository
 unpack :: [SqlValue] -> ScheduleEntity
 unpack [SqlInteger _uid, SqlInteger _class_id, SqlByteString _start_datetime, SqlByteString _end_datetime, SqlInteger _trainer_id] =
   ScheduleEntity
-    { uid = _uid,
+    { uid = Just _uid,
       class_id = _class_id,
       start_datetime = BS.unpack _start_datetime,
       end_datetime = BS.unpack _end_datetime,
